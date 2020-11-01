@@ -11,9 +11,6 @@ chrome.tabs.executeScript(null,
         }
 
         var page = JSON.parse(results[0]);
-        document.getElementById("page").innerText = page.title;
-        console.log(page);
-
         var url = urlBase + '/api/Add?code=' + apiKey + '&url='+encodeURIComponent(page.url)+'&description='+encodeURIComponent(page.title)
 
         let xhr = new XMLHttpRequest();
